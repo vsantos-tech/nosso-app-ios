@@ -6,49 +6,49 @@
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações do iOS para rodar em TELA CHEIA total -->
+    <!-- Configurações para o iOS abrir em TELA CHEIA e sem barras -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Ícone de coração (Icone.jpg) para a Tela de Início -->
+    <!-- Ícone de Coração para a Tela de Início -->
     <link rel="apple-touch-icon" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
         }
 
         html, body {
-            width: 100vw;
-            height: 100vh;
-            min-height: -webkit-fill-available;
-            overflow: hidden;
-            /* A imagem de fundo agora é aplicada AQUI para expandir 100% na tela do iPhone */
-            background-image: url('fundo.jpg'); /* Se seu fundo for PNG, mude para fundo.png */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            width: 100vw !important;
+            height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            background-color: #FFD1DC !important;
         }
 
+        /* Fixa o iframe cobrindo 100% da tela do iPhone de ponta a ponta */
         iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-            display: block;
-            background-color: transparent;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: 999999 !important;
         }
     </style>
 </head>
 <body>
 
-    <!-- Parâmetros para desativar a barra de rodapé e o modo escuro padrão -->
-    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true&embed_options=disable_padding" allowtransparency="true"></iframe>
+    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true" allow="autoplay"></iframe>
 
 </body>
 </html>
