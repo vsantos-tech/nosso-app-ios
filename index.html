@@ -6,12 +6,12 @@
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações para o iOS abrir em TELA CHEIA e sem barras -->
+    <!-- Configurações do iOS para TELA CHEIA total -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Ícone de Coração para a Tela de Início -->
+    <!-- Ícone de coração (Icone.jpg) -->
     <link rel="apple-touch-icon" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
@@ -23,16 +23,22 @@
             box-sizing: border-box !important;
         }
 
+        /* A IMAGEM DE FUNDO AGORA PREENCHE O HTML INTEIRO DO CELULAR */
         html, body {
             width: 100vw !important;
             height: 100vh !important;
+            min-height: 100vh !important;
             margin: 0 !important;
             padding: 0 !important;
             overflow: hidden !important;
-            background-color: #FFD1DC !important;
+            background-image: url('fundo.jpg') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
         }
 
-        /* Fixa o iframe cobrindo 100% da tela do iPhone de ponta a ponta */
+        /* Iframe transparente ocupando 100% da tela sem bordas */
         iframe {
             position: fixed !important;
             top: 0 !important;
@@ -42,13 +48,14 @@
             border: none !important;
             margin: 0 !important;
             padding: 0 !important;
+            background-color: transparent !important;
             z-index: 999999 !important;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true" allow="autoplay"></iframe>
+    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true" allowtransparency="true"></iframe>
 
 </body>
 </html>
