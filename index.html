@@ -2,16 +2,17 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- viewport-fit=cover obriga o navegador a desenhar o fundo até atrás da bateria e do relógio -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações do iOS para TELA CHEIA total -->
+    <!-- Configurações para iOS abrir em TELA CHEIA total -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Ícone de coração (Icone.jpg) -->
+    <!-- Ícone para a Tela de Início -->
     <link rel="apple-touch-icon" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
@@ -23,39 +24,32 @@
             box-sizing: border-box !important;
         }
 
-        /* A IMAGEM DE FUNDO AGORA PREENCHE O HTML INTEIRO DO CELULAR */
         html, body {
-            width: 100vw !important;
-            height: 100vh !important;
-            min-height: 100vh !important;
-            margin: 0 !important;
-            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: -webkit-fill-available !important;
             overflow: hidden !important;
-            background-image: url('fundo.jpg') !important;
+            /* Aplica a imagem diretamente na tela do iOS sem bordas brancas */
+            background: url('fundo.jpg') no-repeat center center fixed !important;
             background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
         }
 
-        /* Iframe transparente ocupando 100% da tela sem bordas */
         iframe {
-            position: fixed !important;
+            position: absolute !important;
             top: 0 !important;
             left: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
+            width: 100% !important;
+            height: 100% !important;
             border: none !important;
             margin: 0 !important;
             padding: 0 !important;
-            background-color: transparent !important;
-            z-index: 999999 !important;
+            background: transparent !important;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true" allowtransparency="true"></iframe>
+    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true&embed_options=disable_padding" allowtransparency="true"></iframe>
 
 </body>
 </html>
