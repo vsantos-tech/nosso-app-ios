@@ -6,16 +6,14 @@
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações do iOS para rodar em TELA CHEIA e cobrir o topo -->
+    <!-- Configurações do iOS para rodar em TELA CHEIA total -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Declaracoes completas para forçar o iPhone a usar o seu Icone.jpg -->
+    <!-- Ícone de coração (Icone.jpg) para a Tela de Início -->
     <link rel="apple-touch-icon" href="Icone.jpg">
-    <link rel="apple-touch-icon" sizes="152x152" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
-    <link rel="apple-touch-icon-precomposed" href="Icone.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
 
     <style>
@@ -28,29 +26,29 @@
         html, body {
             width: 100vw;
             height: 100vh;
-            min-height: 100vh;
+            min-height: -webkit-fill-available;
             overflow: hidden;
-            background-color: #FFD1DC;
+            /* A imagem de fundo agora é aplicada AQUI para expandir 100% na tela do iPhone */
+            background-image: url('fundo.jpg'); /* Se seu fundo for PNG, mude para fundo.png */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        /* Forca o iframe a expandir 100% da tela do celular sem bordas */
         iframe {
             width: 100vw;
             height: 100vh;
-            min-height: 100vh;
             border: none;
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            background-color: transparent;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true"></iframe>
+    <!-- Parâmetros para desativar a barra de rodapé e o modo escuro padrão -->
+    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true&embed_options=disable_padding" allowtransparency="true"></iframe>
 
 </body>
 </html>
