@@ -2,20 +2,21 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- viewport-fit=cover expande o fundo ate as bordas e barra do iPhone -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações do iOS para rodar em TELA CHEIA total -->
+    <!-- Configurações do iOS para rodar em TELA CHEIA e cobrir o topo -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Ícone apontando exatamente para o arquivo Icone.jpg (Com I maiúsculo) -->
+    <!-- Declaracoes completas para forçar o iPhone a usar o seu Icone.jpg -->
     <link rel="apple-touch-icon" href="Icone.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
-    <link rel="icon" type="image/jpeg" href="Icone.jpg">
+    <link rel="apple-touch-icon-precomposed" href="Icone.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
 
     <style>
         * {
@@ -27,23 +28,28 @@
         html, body {
             width: 100vw;
             height: 100vh;
-            height: -webkit-fill-available;
+            min-height: 100vh;
             overflow: hidden;
-            background-color: transparent;
+            background-color: #FFD1DC;
         }
 
+        /* Forca o iframe a expandir 100% da tela do celular sem bordas */
         iframe {
             width: 100vw;
             height: 100vh;
-            height: -webkit-fill-available;
+            min-height: 100vh;
             border: none;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Link embed apontando para o app real -->
     <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true"></iframe>
 
 </body>
