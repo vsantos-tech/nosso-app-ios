@@ -2,17 +2,16 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- viewport-fit=cover obriga o navegador a desenhar o fundo até atrás da bateria e do relógio -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
     <title>Nosso Aplicativo 💗</title>
 
-    <!-- Configurações para iOS abrir em TELA CHEIA total -->
+    <!-- Configurações para iOS abrir em Tela Cheia -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Ícone para a Tela de Início -->
+    <!-- Ícone de Coração para a Tela de Início -->
     <link rel="apple-touch-icon" href="Icone.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Icone.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Icone.jpg">
@@ -25,31 +24,26 @@
         }
 
         html, body {
-            width: 100% !important;
-            height: 100% !important;
-            min-height: -webkit-fill-available !important;
+            width: 100vw !important;
+            height: 100vh !important;
             overflow: hidden !important;
-            /* Aplica a imagem diretamente na tela do iOS sem bordas brancas */
-            background: url('fundo.jpg') no-repeat center center fixed !important;
-            background-size: cover !important;
+            background-color: #FFD1DC !important; /* Fundo rosa fixo */
         }
 
+        /* O iframe é ajustado para empurrar o rodapé do Streamlit para fora da tela */
         iframe {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
+            width: 100vw !important;
+            height: calc(100vh + 50px) !important; /* Estica além do rodapé para escondê-lo */
             border: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            background: transparent !important;
+            display: block !important;
+            margin-top: 0 !important;
+            margin-bottom: -50px !important;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true&embed_options=disable_padding" allowtransparency="true"></iframe>
+    <iframe src="https://com-amor-para-larissa.streamlit.app/?embed=true"></iframe>
 
 </body>
 </html>
