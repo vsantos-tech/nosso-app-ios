@@ -20,7 +20,14 @@
             "data": "04/08/2026 \u00e0s 11:42"
         }
     ],
-    "musicas": [],
+    "musicas": [
+        {
+            "autor": "Vit\u00f3ria",
+            "nome": "Psiu - Liniker",
+            "link": "https://open.spotify.com/track/7njJKNB7tXnf5l37vYfBoW?si=wyvgU2iPQUe8CBkvZ4a_fw&utm_source=copy-link",
+            "data": "04/08/2026 \u00e0s 11:53"
+        }
+    ],
     "fotos": [
         {
             "autor": "Vit\u00f3ria",
