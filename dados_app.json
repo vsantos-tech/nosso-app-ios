@@ -37,6 +37,13 @@
             "data": "04/08/2026 \u00e0s 11:50"
         }
     ],
-    "comidas": [],
+    "comidas": [
+        {
+            "autor": "Vit\u00f3ria",
+            "nome": "macarr\u00e3o com br\u00f3colis \ud83e\udd66 ",
+            "tipo": "Fazer em Casa",
+            "data": "04/08/2026 \u00e0s 11:51"
+        }
+    ],
     "dates": []
 }
