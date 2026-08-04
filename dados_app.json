@@ -13,7 +13,13 @@
             "data": "04/08/2026 \u00e0s 11:41"
         }
     ],
-    "sentimentos": [],
+    "sentimentos": [
+        {
+            "autor": "Vit\u00f3ria",
+            "sentimentos": "Com Saudade \u2764\ufe0f, Feliz \ud83d\ude0a",
+            "data": "04/08/2026 \u00e0s 11:42"
+        }
+    ],
     "musicas": [],
     "fotos": [],
     "datas": [],
