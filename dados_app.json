@@ -136,6 +136,12 @@
     "dates": [
         {
             "autor": "Vit\u00f3ria",
+            "ideia": "caf\u00e9 bonjur \u2615",
+            "status": "J\u00e1 fomos/fizemos e amamos!",
+            "data": "05/08/2026 \u00e0s 13:19"
+        },
+        {
+            "autor": "Vit\u00f3ria",
             "ideia": "outback \ud83c\udf54",
             "status": "J\u00e1 fomos/fizemos e amamos!",
             "data": "04/08/2026 \u00e0s 11:52"
