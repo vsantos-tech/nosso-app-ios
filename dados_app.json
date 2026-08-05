@@ -128,6 +128,12 @@
   "comidas": [
     {
       "autor": "Vit\u00f3ria",
+      "nome": "bolo de banana \ud83e\udd6e",
+      "tipo": "Fazer em Casa",
+      "data": "05/08/2026 \u00e0s 14:25"
+    },
+    {
+      "autor": "Vit\u00f3ria",
       "nome": "pancakes \ud83e\udd5e",
       "tipo": "Fazer em Casa",
       "data": "05/08/2026 \u00e0s 14:25"
